@@ -1,0 +1,27 @@
+{% extends 'main_app/base.html' %}
+
+{% block title%}
+{{ title }}
+{% endblock %}
+
+
+{% block content%}
+    <h1>Глваная страница</h1>
+        {% if tasks %}
+            {% for i in tasks %}
+                <div class="alert alert-warning mt-3">
+                    <h3>{{i.title}}</h3>
+                    <p>{{i.task}}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>У вас нет записей!</p>
+        {% endif %}
+
+{% endblock %}
+
+
+
+
+
+
